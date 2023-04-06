@@ -1,7 +1,7 @@
  <!-- Main Sidebar Container -->
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="home.php" class="brand-link">
+    <a href="index.php?hal=home" class="brand-link">
       <img src="asset/img/masdep.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Week 4</span>
     </a>
@@ -44,22 +44,46 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="array_siswa.php" class="nav-link">
+              <li class="nav-item ">
+                <a href="index.php?hal=produk" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Praktikum 1</p>
+                  <p>Produk</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="form_belanja.php" class="nav-link">
+                <a href="index.php?hal=pesanan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Praktikum 2</p>
+                  <p>Pesanan</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="form_register.php" class="nav-link">
+                <a href="index.php?hal=vendor" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Praktikum 3</p>
+                  <p>Vendor</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?hal=jenis_produk" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Jenis Produk</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?hal=kartu" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kartu</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?hal=pembelian" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Pembelian</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?hal=pembayaran" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Pembayaran</p>
                 </a>
               </li>
             </ul>

@@ -1,7 +1,4 @@
-<?php
-include_once('navbar.php');
-include_once('sidebar.php');
-?>
+
 <!-- ini untuk buka konten -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -27,6 +24,3 @@ include_once('sidebar.php');
 </div>
 
 <!-- ini untuk tutup konten -->
-<?php
-include_once('footer.php');
-?>
