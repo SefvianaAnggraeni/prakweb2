@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InputController;
 use App\Http\Controllers\ForminputController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProdukController;
