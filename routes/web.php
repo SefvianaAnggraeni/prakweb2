@@ -40,6 +40,10 @@ Route::get('/nf', function () {
 Route::get('/table', function () {
     return view('table');
 });
+
+Route::get('/input', [InputController::class, 'index' ]); 
+Route::post('/output', [InputController::class, 'output' ]);
+
 Route::get('/forminput', [ForminputController::class, 'index']);
 Route::post('/forminput', [ForminputController::class, 'input']);
 
