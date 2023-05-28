@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ForminputController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProdukController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,4 +40,14 @@ Route::get('/nf', function () {
 Route::get('/table', function () {
     return view('table');
 });
+Route::get('/forminput', [ForminputController::class, 'index']);
+Route::post('/forminput', [ForminputController::class, 'input']);
 
+
+
+
+//ini route untuk backend atau admin
+Route::prefix('admin')->group(function (){
+    Route::get('/dashboard', [ DashboardController::class, 'index']);
+    Route::get('/produk', [ProdukController::class, 'index']);
+});
