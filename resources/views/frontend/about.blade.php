@@ -18,9 +18,10 @@ semua code yang ada di dalam file yang di extends --}}
     <ul class="list-unstyled">
         <li><i class="bi bi-rounded-right"></i> <strong>Nama :</strong> Sefviana Anggraeni</li>
         <li><i class="bi bi-rounded-right"></i> <strong>Nim :</strong> 0110122092</li>
+        <li><i class="bi bi-rounded-right"></i> <strong>Umur :</strong> 20 Tahun</li>
+        <li><i class="bi bi-rounded-right"></i> <strong>Domisili :</strong> Depok, Jawa Barat</li>
         <li><i class="bi bi-rounded-right"></i> <strong>Tanggal Lahir :</strong> 29 April 2003</li>
-        <li><i class="bi bi-rounded-right"></i> <strong>Github :</strong> <a href="https://github.com/SefvianaAnggraeni">SefvianaAnggraeni</a> </li>
-        <li><i class="bi bi-rounded-right"></i> <strong>Instagram :</strong> <a href="https://www.instagram.com/sefviananggrn/">@sefviananggrn</a> </li>
+        <li><i class="bi bi-rounded-right"></i> <strong>Email :</strong> @sefviaraenrais@gmail.com </li>
     </ul>
   </div>
 </section>

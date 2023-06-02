@@ -27,13 +27,6 @@
   <!-- Template Main CSS File -->
   <link href="{{ asset ('front/css/style.css')}}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Kelly
-  * Updated: May 30 2023 with Bootstrap v5.3.0
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -55,10 +48,9 @@
       </nav><!-- .navbar -->
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100010568172084" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/sefviananggrn/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/sefviana-anggraeni-828017252/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
 
     </div>
