@@ -1,5 +1,5 @@
 @include('frontend.layout.top')
-@include('frontend.layout.menu')
+
 
 <div id="hero_content">
 <main>

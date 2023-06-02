@@ -6,7 +6,6 @@ use App\Http\Controllers\ForminputController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\FrontendController;
-use App\Http\Controllers\AboutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,6 +59,6 @@ Route::prefix('admin')->group(function (){
 });
 Route::prefix('frontend')->group(function () {
     Route::get('/home', [FrontendController::class, 'index'])->name('home');
-    Route::get('/about', [AboutController::class, 'index'])->name('about');
+    Route::get('/about', [FrontendController::class, 'about'])->name('about');
 
 });
