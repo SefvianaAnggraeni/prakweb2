@@ -2,19 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\KategoriProduk;
 use Illuminate\Http\Request;
+use App\Models\Pesanan;
 
-
-class KategoriProdukController extends Controller
+class PesananController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $kategori_produk = new KategoriProduk();
-        return view('admin.produk.kategori_produk', ['kategori_produk' => $kategori_produk->getALLData()]);
+        $pesanan = new Pesanan();
+        return view('admin.produk.pesanan', ['pesanan' => $pesanan->getAllData()]);
     }
 
     /**

@@ -19,8 +19,8 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     
                                     <a class="nav-link" href="{{ url ('admin/produk')}}">Produk</a>
-                                    <a class="nav-link" href="{{ url ('admin/produk/kategoriproduk')}}">Kategori Produk</a>
-
+                                    <a class="nav-link" href="{{ url ('admin/produk/kategori_produk')}}">Kategori Produk</a>
+                                    <a class="nav-link" href="{{ url ('admin/produk/pesanan')}}">Pesanan</a>
                                 </nav>
                             </div> 
                     

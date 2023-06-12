@@ -6,6 +6,7 @@ use App\Http\Controllers\ForminputController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\KategoriProdukController;
+use App\Http\Controllers\PesananController;
 use App\Http\Controllers\FrontendController;
 use App\Models\KategoriProduk;
 
@@ -61,7 +62,8 @@ Route::prefix('admin')->group(function (){
     Route::get('/produk', [ProdukController::class, 'index']);
     Route::get('/produk/create', [ProdukController::class, 'create']);
     Route::post('/produk/store', [ProdukController::class, 'store']);
-    Route::get('/produk/kategoriproduk', [KategoriProduk::class, 'index']);
+    Route::get('/produk/kategori_produk', [KategoriProdukController::class, 'index']);
+    Route::get('/produk/pesanan', [PesananController::class, 'index']);
 });
 Route::prefix('frontend')->group(function () {
     Route::get('/home', [FrontendController::class, 'index'])->name('home');
