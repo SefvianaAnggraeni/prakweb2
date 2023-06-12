@@ -5,7 +5,10 @@ use App\Http\Controllers\InputController;
 use App\Http\Controllers\ForminputController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\KategoriProdukController;
 use App\Http\Controllers\FrontendController;
+use App\Models\KategoriProduk;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,6 +59,9 @@ Route::post('/forminput', [ForminputController::class, 'input']);
 Route::prefix('admin')->group(function (){
     Route::get('/dashboard', [ DashboardController::class, 'index']);
     Route::get('/produk', [ProdukController::class, 'index']);
+    Route::get('/produk/create', [ProdukController::class, 'create']);
+    Route::post('/produk/store', [ProdukController::class, 'store']);
+    Route::get('/produk/kategoriproduk', [KategoriProduk::class, 'index']);
 });
 Route::prefix('frontend')->group(function () {
     Route::get('/home', [FrontendController::class, 'index'])->name('home');
