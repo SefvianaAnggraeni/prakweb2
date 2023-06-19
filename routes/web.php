@@ -9,6 +9,7 @@ use App\Http\Controllers\KategoriProdukController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\FrontendController;
 use App\Models\KategoriProduk;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,12 +62,26 @@ Route::prefix('admin')->group(function (){
     Route::get('/dashboard', [ DashboardController::class, 'index']);
     Route::get('/produk', [ProdukController::class, 'index']);
     Route::get('/produk/create', [ProdukController::class, 'create']);
+    Route::get('/produk/edit/{id}', [ProdukController::class, 'edit']);
     Route::post('/produk/store', [ProdukController::class, 'store']);
-    Route::get('/produk/kategori_produk', [KategoriProdukController::class, 'index']);
-    Route::get('/produk/pesanan', [PesananController::class, 'index']);
+    Route::get('/produk/delete/{id}',[ProdukController::class, 'destroy']);
+    Route::get('/kategori_produk/kategori_produk', [KategoriProdukController::class, 'index']);
+    Route::get('/kategori_produk/create', [KategoriProdukController::class, 'create']);
+    Route::post('/kategori_produk/store', [KategoriProdukController::class, 'store']);
+    Route::get('/kategori_produk/delete/{id}', [KategoriProduk::class, 'destroy']);
+    Route::get('/pesanan/pesanan', [PesananController::class, 'index']);
+    Route::get('/pesanan/create', [PesananController::class, 'create']);
+    Route::post('/pesanan/store', [PesananController::class, 'store']);
+    Route::get('/pesanan/edit/{id}', [PesananController::class, 'edit']);
+    
+    
 });
 Route::prefix('frontend')->group(function () {
     Route::get('/home', [FrontendController::class, 'index'])->name('home');
     Route::get('/about', [FrontendController::class, 'about'])->name('about');
 
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

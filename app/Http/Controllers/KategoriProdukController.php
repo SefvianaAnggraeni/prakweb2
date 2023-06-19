@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\KategoriProduk;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 class KategoriProdukController extends Controller
@@ -14,7 +15,7 @@ class KategoriProdukController extends Controller
     public function index()
     {
         $kategori_produk = new KategoriProduk();
-        return view('admin.produk.kategori_produk', ['kategori_produk' => $kategori_produk->getALLData()]);
+        return view('admin.kategori_produk.kategori_produk', ['kategori_produk' => $kategori_produk->getALLData()]);
     }
 
     /**
@@ -22,7 +23,8 @@ class KategoriProdukController extends Controller
      */
     public function create()
     {
-        //
+        $kategori_produk = KategoriProduk::all();
+        return view('admin.kategori_produk.create');
     }
 
     /**
@@ -30,7 +32,10 @@ class KategoriProdukController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $kategori_produk = new KategoriProduk();
+        $kategori_produk->nama = $request->nama;
+        $kategori_produk->save();
+        return redirect('admin/kategori_produk');
     }
 
     /**
@@ -52,7 +57,7 @@ class KategoriProdukController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
         //
     }
@@ -62,6 +67,7 @@ class KategoriProdukController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('kategori_produk')->where('id',$id)->delete();
+        return redirect('admin/kategori_produk');
     }
 }

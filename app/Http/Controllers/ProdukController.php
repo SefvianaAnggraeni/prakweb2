@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Produk;
 use App\Models\KategoriProduk;
 
+use Illuminate\Support\Facades\DB;
+
 
 class ProdukController extends Controller
 {
@@ -76,6 +78,7 @@ class ProdukController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('produk')->where('id',$id)->delete(); 
+        return redirect('admin/produk');
     }
 }

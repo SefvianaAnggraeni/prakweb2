@@ -23,8 +23,8 @@ semua code yang ada di dalam file yang di extends --}}
         <i class="fas fa-table me-1"></i>
      Data Produk
 </div>
-<div class="card-body">
-    <table id="datatablesSimple">
+<div class="card-body" style="text-align: center;">
+    <table id="datatablesSimple" cellpadding="5">
         <thead>
             <tr>
                 <th>No</th>
@@ -36,21 +36,9 @@ semua code yang ada di dalam file yang di extends --}}
                 <th>Minimal Stok</th>
                 <th>Deskripi</th>
                 <th>Kategori Produk</th>
+                <th>Action</th>
             </tr>
         </thead>
-        <tfoot>
-            <tr>
-                <th>No</th>
-                <th>Kode</th>
-                <th>Nama</th>
-                <th>Harga Jual</th>
-                <th>Harga Beli</th>
-                <th>Stok</th>
-                <th>Minimal Stok</th>
-                <th>Deskripsi</th>
-                <th>Kategori Produk</th>
-            </tr>
-        </tfoot>
         <tbody>
         @php $no = 1; @endphp
         @foreach($produk as $p)
@@ -66,6 +54,8 @@ semua code yang ada di dalam file yang di extends --}}
                 <td>{{$p->nama_kategori}}</td>
                 <!--- nama_kategori diambil dari join yang ada di controller produk yang
                 sudah dibuatkan join -->
+                <td><a href="{{ url('admin/produk/edit/'. $p->id) }}" class="btn btn-success">Edit</a></td>
+                <td><a href="{{ url('admin/produk/delete/'. $p->id) }}" class="btn btn-danger">Delete</a></td>
             </tr>
         @php $no++
         @endphp

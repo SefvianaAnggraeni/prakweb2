@@ -10,14 +10,15 @@ class KategoriProduk extends Model
 {
     use HasFactory;
     protected $table = 'kategori_produk';
+    public $timestamps = false;
     protected $primarykey = 'id';
     protected $fillable = [
         'nama'
     ];
 
-    public function produk(){
-        return $this->belongTo(Produk::class);
-    }
+    // public function produk(){
+    //     return $this->belongTo(Produk::class);
+    // }
 
     public function getAllData(){
         $alldata = DB::table('kategori_produk')
